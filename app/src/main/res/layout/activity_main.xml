@@ -32,13 +32,36 @@
             android:fontFamily="sans-serif-condensed"
             android:text="Simplest sleep time tracker"/>
 
-    <TextView
+    <RelativeLayout
             android:layout_above="@id/ll_sleep"
-            android:textSize="16sp"
-            android:textColor="#FAFAFA"
-            tools:text="Your recorded sleep timings"
-            android:padding="16dp"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+        <TextView
+                android:layout_alignParentStart="true"
+                android:textSize="18sp"
+                android:textColor="#607D8B"
+                android:text="Approximate sleep timings"
+                android:padding="16sp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        <ImageView
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/refresh"
+                android:src="@drawable/refresh"
+                android:tint="#607D8B"
+                android:layout_width="28dp"
+                android:layout_height="28dp"/>
+
+    </RelativeLayout>
 
     <LinearLayout
             android:padding="16dp"

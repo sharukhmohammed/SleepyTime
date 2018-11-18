@@ -63,8 +63,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_outline_local_hotel_24px" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/outline-local_hotel-24px.svg" />
+                            <entry key="outputName" value="refresh" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/outline-refresh-24px.svg" />
                           </map>
                         </option>
                       </PersistentState>

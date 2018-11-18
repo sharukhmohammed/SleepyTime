@@ -18,8 +18,7 @@ import sharukh.sleepytime.R.mipmap.ic_launcher
 import android.support.v4.app.NotificationCompat
 import android.support.v4.app.NotificationManagerCompat
 import android.os.Build
-
-
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +42,12 @@ class MainActivity : AppCompatActivity() {
             service_tracker.visibility = View.GONE
         }
 
-
+        refresh.setOnClickListener {
+            var sleepText: TextView = findViewById(R.id.activity_main_text_sleep)
+            var wakeupText: TextView = findViewById(R.id.activity_main_text_wake_up)
+            sleepText.text = Data.sdf.format(Date(Data.getSleepTime(this)))
+            wakeupText.text = Data.sdf.format(Date(Data.getWakeUpTime(this)))
+        }
     }
 
     override fun onResume() {
@@ -51,8 +55,8 @@ class MainActivity : AppCompatActivity() {
 
         var sleepText: TextView = findViewById(R.id.activity_main_text_sleep)
         var wakeupText: TextView = findViewById(R.id.activity_main_text_wake_up)
-        sleepText.text= Data.sdf.format(Date(Data.getSleepTime(this)))
-        wakeupText.text= Data.sdf.format(Date(Data.getWakeUpTime(this)))
+        sleepText.text = Data.sdf.format(Date(Data.getSleepTime(this)))
+        wakeupText.text = Data.sdf.format(Date(Data.getWakeUpTime(this)))
 
     }
 
